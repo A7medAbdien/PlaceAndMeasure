@@ -210,12 +210,12 @@ class Measurement : AppCompatActivity(), Scene.OnUpdateListener {
         return "$distanceCMFloor cm"
     }
 
-    // with Float, all the following methods passing to this eventually
+    // with Float
     private fun calculateDistance(x: Float, y: Float, z: Float): Float {
         return sqrt(x.pow(2) + y.pow(2) + z.pow(2))
     }
 
-    // with Vector3 and Pose, Used by measure the distance form the ground
+    // with Vector3 and Pose
     private fun calculateDistance(objectPose0: Vector3, objectPose1: Pose): Float {
         return calculateDistance(
             objectPose0.x - objectPose1.tx(),
